@@ -1,18 +1,29 @@
 #include<stdio.h>
-int main(){
-    int team;
-    printf("Enter your team number :");
-    printf("\n 1.chennai");
-    printf("\n 2.mumbai");
-    printf("\n Enter your choice");
-    scanf("%d",&team);
-    if(team == 1){
-        printf("\n Chennai Super Kings for the win! ");
-    }else if(team ==2){
-        printf("\n Go mumbai indians!");
-    }
-    else{
-        printf("\n team not recognized");
-    }
-
+main(){
+	int choice;
+	printf("\n Zomato-style food suggestion tool");
+	printf("\n 1.breafast");
+	printf("\n 2.lunch");
+	printf("\n 3.dinner");
+	printf("\n 4.snack");
+	printf("\n Enter your choice=");
+	scanf("%d",&choice);
+	switch(choice){
+		case 1:
+			printf("Suggested dish : masala dosa");
+		break;
+		case 2:
+			printf("Suggested dish :veg biryani");
+		break;
+		case 3:
+			printf("Suggested dish :Paneer Butter Masala with Naan");
+		break;
+		case 4:
+			printf("Suggested dish :samosa");
+		break;
+		default:
+		     printf("\n try some fruits");
+		break;
+	}
+	
 }
