@@ -2,10 +2,11 @@
 main()
 {
 	const float gst=0.18;
-	float FinalPrice,BasePrice;
+	float FinalPrice,BasePrice,gstp;
 	printf("\n Enter the base price of order =");
 	scanf ("%f",&BasePrice);
-	printf("\ the final price is =%f",BasePrice*gst);
+	gstp=BasePrice*gst
+	printf("\ the final price is =%f",BasePrice-gst);
 	
 	
 }
