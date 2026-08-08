@@ -1,0 +1,47 @@
+Entry-controlled vs Exit-controlled loops
+
+1. Entry-controlled loop — while
+
+Condition is checked before executing the loop body.
+
+#include <stdio.h>
+
+int main()
+{
+    int i = 5;
+
+    while (i < 5)
+    {
+        printf("Hello");
+        i++;
+    }
+
+    return 0;
+}
+
+Here, i < 5 is false at the start, so the loop runs 0 times.
+
+
+---
+
+2. Exit-controlled loop — do-while
+
+Condition is checked after executing the loop body.
+
+#include <stdio.h>
+
+int main()
+{
+    int i = 5;
+
+    do
+    {
+        printf("Hello");
+        i++;
+    } while (i < 5);
+
+    return 0;
+}
+
+Here, i < 5 is false at the start, but the loop still runs 1 time because do-while executes the body first.
+
