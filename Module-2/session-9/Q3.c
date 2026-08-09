@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 void calculateAverage(int dailyOrders[], int size) {
-    int sum = 0;
+    int sum = 0,i;
 
-    for (int i = 0; i < size; i++) {
+    for ( i = 0; i < size; i++) {
         sum = sum + dailyOrders[i];
     }
 
