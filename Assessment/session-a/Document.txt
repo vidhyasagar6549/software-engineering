@@ -1,0 +1,89 @@
+SCENARIO-1
+You are a junior developer at a fintech startup building a digital wallet app. The team is
+debating between Waterfall and Agile methodology. The project has frequently
+changing requirements and the client expects to review working features every two
+weeks.
+Question: Which development methodology would you recommend for this project, and why?
+Identify two specific risks the team would face if they chose the wrong methodology for this
+context
+ANS:-
+Recommended Methodology: Agile
+I would recommend "Agile methodology" for the digital wallet project.
+"Why?"
+* The project has "frequently changing requirements", and Agile allows the team to adapt requirements during development.
+* The client wants to "review working features every two weeks". Agile uses short iterations/sprints, typically 1-2 weeks, where a working version can be demonstrated.
+* Regular client feedback helps the team "find mistakes early" and build features that match the client's expectations.
+* Agile reduces the risk of spending a lot of time developing features that the client later decides to change.
+
+Risks of Choosing the Wrong Methodology
+
+If the team chooses "Waterfall" instead of Agile, two major risks are:
+1. Difficulty handling changing requirements:
+   Waterfall follows a fixed sequence, so changes after the requirements phase can be expensive and time-consuming. The team may have to redo completed work.
+
+2. Late feedback and delayed problem detection:
+The client may not see a working product until much later. This could result in discovering usability or functional problems near the end of the project, causing delays and increased costs.
+**Conclusion:- Agile is the better choice because it supports "flexibility, frequent client feedback, and regular delivery of working features", which directly matches the project's requirements.
+
+
+SCENARIO-2
+You are collaborating on a college project website with three teammates. Just before a
+client demo, one teammate pushed incomplete code directly to the main branch,
+breaking the layout for everyone else on the team.
+Question: Describe the Git workflow your team should adopt to prevent this from happening
+again. Name at least two Git commands your team should use as part of this workflow and
+explain the role of each command
+ANS:-
+Recommended Git Workflow
+
+The team should use a "feature-branch workflow" instead of allowing everyone to push directly to the `main` branch.
+1. Create a separate branch for each feature or task.
+  Each teammate should work on their own branch, such as `feature/login` or `feature/navbar`.
+2. Commit changes regularly.
+Developers should commit only completed and tested changes to their feature branch.
+3. Push the branch to the remote repository.
+   The teammate can push their work without affecting the `main` branch.
+4. Create a Pull Request (PR).
+Before merging, another teammate should review the code and check that the website still works correctly.
+5. Test before merging.
+After review and testing, the PR can be merged into `main`. The `main` branch should contain only stable, working code.
+Important Git Commands
+1.`git checkout -b feature-name`
+Creates and switches to a new branch. This allows a developer to work on a feature without changing the `main` branch.
+2.git add .
+  Stages the modified files so they can be included in the next commit.
+3.git commit -m "message"
+Saves the staged changes to the local Git history with a meaningful message.
+4.git push origin feature-name
+Uploads the feature branch to the remote repository so teammates can review it and create a Pull Request.
+Conclusion
+The team should "protect the `main` branch", avoid direct pushes, and use "feature branches + Pull Requests + code review + testing". This would prevent incomplete code from immediately breaking the website for the whole team.
+
+SCENARIO-3
+You are building an online internship application form for a college placement portal.
+The form must collect: applicant name, email address, phone number, preferred
+domain (one of: Web, Data, Mobile, AI), and a resume file upload. The institution requires
+that no field be left empty and that the email field only accepts valid email formats -
+without writing any JavaScript.
+Question: List the appropriate HTML input types you would use for each of the five fields. Explain
+how you would use HTML5 built-in validation attributes to enforce the two constraints mentioned,
+and why these attributes alone are not sufficient for production-level validation
+ANS:-
+Appropriate HTML Input Types
+For the online internship application form, I would use the following HTML5 input types:
+*Applicant Name:-`text`
+*Email Address:- `email`
+Phone Number:`tel`
+Preferred Domain:-`select`
+Resume File Upload:-`file`
+HTML5 Validation Attributes
+"Why?"
+Use the `required` attribute on all five fields so that no field can be left empty.
+Use `type="email"` for the email field. It automatically checks whether the entered email follows a valid email format.
+Use a `<select required>` for the preferred domain with options: Web, Data, Mobile, and AI.
+Use `<input type="file" required>`so that the applicant must upload a resume.
+Why HTML5 Validation Is Not Enough for Production
+HTML5 validation can be bypassed or disabled, so it should not be trusted for security.
+It cannot confirm whether an email address actually exists.
+File uploads require additional file type, size, and security checks.
+Therefore, server-side validation is also required to ensure the data is safe and correct. 
