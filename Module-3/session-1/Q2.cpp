@@ -1,22 +1,35 @@
-#include<iostream>
+#include <iostream>
+#include <cstring>
 using namespace std;
-void markTaskDone(char task[5][50],int index) {
-	cout<<" Enter the index :-"; 
-	cin>>index;
-	cout << "Task: " << task[index - 1] << " Done";	
+
+char task[5][50];
+
+void markTaskDone(int index)
+{
+    cout << "Enter the index: ";
+    cin >> index;
+
+    strcat(task[index - 1], " - DONE");
 }
-main(){
-	char task[5][50];
-	int i;
-	for(i=0;i<5;i++)
-	{
-		cout<<" Enter your task:-"; 
-		cin>>task[i];
-	}
-	for(i=0;i<5;i++)
-	{
-		cout<<" \n Your Task are :-";
-		cout<<"  task:-"<<i+1<<task[i];  
-	}
-	
+
+ main()
+{
+    int i, index;
+
+    for(i = 0; i < 5; i++)
+    {
+        cout << "Enter your task: ";
+        cin >> task[i];
+    }
+cout <<"\n";
+    markTaskDone(index);
+
+    cout << "\nUpdated Task List:\n";
+
+    for(i = 0; i < 5; i++)
+    {
+        cout << "Task " << i + 1 << ": " << task[i] << endl;
+    }
+
+    
 }
