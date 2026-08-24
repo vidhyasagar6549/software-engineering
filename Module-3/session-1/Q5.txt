@@ -1,0 +1,5 @@
+1. In the C version, the task data and functions were separate. In the OOP version, the class keeps the task data and methods together.
+
+2. In the C version, changing a task to DONE required manually modifying the array. In the OOP version, the markDone() method easily changes the task status.
+
+3. In the C version, the code became harder to organize when adding more features. In the OOP version, methods like markDone() and display() keep the code simple and organized.
