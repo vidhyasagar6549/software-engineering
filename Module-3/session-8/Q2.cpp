@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string.h>
+#include<fstream>
 using namespace std;
 class Content{
 	public:
@@ -14,6 +15,18 @@ class Content{
         cout << "\n Views    : " << views;
         cout << "\n Status   : " << status;
     }
+    void save() {
+    ofstream file("content_list.txt", ios::app);
+
+    file << title << endl;
+    file << platform << endl;
+    file << views << endl;
+    file << status << endl;
+
+    file.close();
+
+    cout << "\nContent added successfully!\n";
+}
 };
 main(){
 	Content c;
@@ -22,5 +35,6 @@ main(){
 	c.views=5000;
 	c.status="Published";
 	c.display();
-	
+	c.save();
 }
+

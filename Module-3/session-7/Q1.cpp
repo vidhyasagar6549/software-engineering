@@ -6,11 +6,11 @@ using namespace std;
 
     ofstream file("my_fav_songs.txt");
 
-    file << "Perfect" << endl;
-    file << "Shape of You" << endl;
-    file << "Believer" << endl;
-    file << "Blinding Lights" << endl;
-    file << "Faded" << endl;
+    file << "Perfect" ;
+    file << "Shape of You"; 
+    file << "Believer" ;
+    file << "Blinding Lights" ;
+    file << "Faded";
 
     file.close();
 
