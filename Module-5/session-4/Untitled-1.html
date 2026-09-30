@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart-style Product Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aliceblue;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: yellow;
+            border-radius: 30px;
+            overflow: auto;
+        }
+
+        .navbar li {
+            margin: 10px 18px;
+            float: left;
+            list-style: none;
+        }
+
+        .navbar li a {
+            color: black;
+            text-decoration: none;
+            padding: 3px;
+        }
+
+        /* Product */
+        .product {
+            width: 90%;
+            max-width: 1000px;
+            background: #d0eaff;
+            display: flex;
+            margin: 30px auto;
+            padding: 30px;
+            align-items: center;
+            gap: 40px;
+        }
+
+        /* Product Image */
+        header {
+            width: 40%;
+            text-align: center;
+        }
+
+        header img {
+            width: 250px;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        /* Product Details */
+        article {
+            width: 60%;
+        }
+
+        article h1 {
+            margin-bottom: 15px;
+        }
+
+        article p {
+            margin: 10px 0;
+        }
+
+        .price {
+            color: green;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        article li {
+            margin: 8px 0;
+        }
+
+        button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 15px 5px 0 0;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+        }
+
+        footer h3 {
+            color: blue;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Product -->
+    <div class="product">
+
+        <!-- Product Image -->
+        <header>
+            <h1>Samsung Galaxy S24</h1>
+
+            <img src="s1.webp" alt="Samsung Galaxy S24">
+        </header>
+
+        <!-- Product Details -->
+        <article>
+
+            <h1>Samsung Galaxy S24 5G</h1>
+
+            <p>
+                Experience powerful performance with a beautiful display,
+                excellent camera, and long-lasting battery.
+            </p>
+
+            <p class="price">₹69,999</p>
+
+            <h2>Key Features</h2>
+
+            <ul>
+                <li>6.2-inch AMOLED Display</li>
+                <li>8 GB RAM</li>
+                <li>256 GB Storage</li>
+                <li>50 MP Camera</li>
+                <li>5G Connectivity</li>
+            </ul>
+
+            <button>Add to Cart</button>
+            <button>Buy Now</button>
+
+        </article>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Offers & Warranty</h3>
+
+        <p>✓ 10% instant discount on selected bank cards.</p>
+        <p>✓ 1 year manufacturer warranty.</p>
+        <p>✓ Free delivery available.</p>
+    </footer>
+
+</body>
+
+</html>
