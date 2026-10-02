@@ -1,173 +1,330 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Review - Inception</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flipkart-style Product Page</title>
+<style>
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* Body */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f2f2f2;
+        color: #333;
+        line-height: 1.6;
+    }
 
-        body {
-            background-color: aliceblue;
-            font-family: Arial, sans-serif;
-        }
+    /* Header */
+    header {
+        background-color: #222;
+        color: white;
+        padding: 20px;
+    }
 
-        /* Navbar */
-        .navbar {
-            background-color: yellow;
-            border-radius: 30px;
-            overflow: auto;
-        }
+    header h1 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
 
-        .navbar li {
-            margin: 10px 18px;
-            float: left;
-            list-style: none;
-        }
+    /* Navigation */
+    nav {
+        text-align: center;
+    }
 
-        .navbar li a {
-            color: black;
-            text-decoration: none;
-            padding: 3px;
-        }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
 
-        /* Product */
-        .product {
-            width: 90%;
-            max-width: 1000px;
-            background: #d0eaff;
-            display: flex;
-            margin: 30px auto;
-            padding: 30px;
-            align-items: center;
-            gap: 40px;
-        }
+    nav a:hover {
+        color: #ffcc00;
+    }
 
-        /* Product Image */
+    /* Main */
+    main {
+        width: 90%;
+        max-width: 900px;
+        margin: 30px auto;
+    }
+
+    /* Article */
+    article {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Movie Header */
+    article > header {
+        background-color: #333;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+
+    article > header h2 {
+        color: #ffcc00;
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    article > header p {
+        margin: 5px 0;
+    }
+
+    /* Sections */
+    section {
+        margin-bottom: 25px;
+        padding: 20px;
+        border-left: 5px solid #ffcc00;
+        background-color: #fafafa;
+    }
+
+    section h3 {
+        color: #222;
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    section p {
+        margin-bottom: 10px;
+    }
+
+    /* Rating */
+    .rating {
+        color: #e6a800;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    /* Lists */
+    ul {
+        margin-left: 25px;
+    }
+
+    li {
+        margin: 8px 0;
+    }
+
+    /* Pros and Cons */
+    .pros {
+        border-left-color: green;
+    }
+
+    .pros h3 {
+        color: green;
+    }
+
+    .cons {
+        border-left-color: red;
+    }
+
+    .cons h3 {
+        color: red;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+    }
+
+    footer nav a {
+        color: #ccc;
+        font-size: 14px;
+    }
+
+    footer nav a:hover {
+        color: #ffcc00;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+
         header {
-            width: 40%;
-            text-align: center;
+            padding: 15px;
         }
 
-        header img {
-            width: 250px;
-            height: 300px;
-            object-fit: contain;
-        }
-
-        /* Product Details */
-        article {
-            width: 60%;
-        }
-
-        article h1 {
-            margin-bottom: 15px;
-        }
-
-        article p {
-            margin: 10px 0;
-        }
-
-        .price {
-            color: green;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        article li {
+        nav a {
+            display: block;
             margin: 8px 0;
         }
 
-        button {
-            background-color: orange;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            margin: 15px 5px 0 0;
-            cursor: pointer;
-        }
-
-        /* Footer */
-        footer {
-            width: 90%;
-            max-width: 1000px;
+        main {
+            width: 95%;
             margin: 20px auto;
-            padding: 20px;
-            background-color: white;
         }
 
-        footer h3 {
-            color: blue;
-            margin-bottom: 10px;
+        article {
+            padding: 15px;
         }
-    </style>
-</head>
 
-<body>
+        article > header h2 {
+            font-size: 26px;
+        }
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        section {
+            padding: 15px;
+        }
+    }
+</style>
+
+</head> <body>
+<!-- Website Header -->
+<header>
+
+    <h1>Movie Review Website</h1>
+
+    <!-- Main Navigation -->
+    <nav aria-label="Main navigation">
+        <a href="#">Home</a>
+        <a href="#">Movies</a>
+        <a href="#">Reviews</a>
+        <a href="#">Contact</a>
     </nav>
 
-    <!-- Product -->
-    <div class="product">
+</header>
 
-        <!-- Product Image -->
+
+<!-- Main Content -->
+<main>
+
+    <!-- Movie Review -->
+    <article>
+
+        <!-- Movie Information -->
         <header>
-            <h1>Samsung Galaxy S24</h1>
 
-            <img src="s1.webp" alt="Samsung Galaxy S24">
-        </header>
-
-        <!-- Product Details -->
-        <article>
-
-            <h1>Samsung Galaxy S24 5G</h1>
+            <h2>Inception</h2>
 
             <p>
-                Experience powerful performance with a beautiful display,
-                excellent camera, and long-lasting battery.
+                <strong>Director:</strong> Christopher Nolan
             </p>
 
-            <p class="price">₹69,999</p>
+            <p>
+                <strong>Release Year:</strong> 2010
+            </p>
 
-            <h2>Key Features</h2>
+            <p>
+                <strong>Genre:</strong> Science Fiction, Thriller
+            </p>
+
+        </header>
+
+
+        <!-- Review Section -->
+        <section>
+
+            <h3>Movie Review</h3>
+
+            <p>
+                Inception is a science-fiction thriller that explores
+                dreams, memory, and reality. The movie follows Dom Cobb,
+                a skilled thief who enters people's dreams to steal
+                valuable information.
+            </p>
+
+            <p>
+                Cobb is given an unusual task: instead of stealing an
+                idea, he must plant one inside someone's mind. The story
+                combines action, mystery, and science fiction to create
+                a complex and engaging experience.
+            </p>
+
+            <p>
+                The movie is especially impressive because of its
+                storytelling, visual effects, music, and strong
+                performances.
+            </p>
+
+        </section>
+
+
+        <!-- Rating Section -->
+        <section>
+
+            <h3>Rating</h3>
+
+            <p class="rating">
+                ★★★★★ 9/10
+            </p>
+
+        </section>
+
+
+        <!-- Pros Section -->
+        <section class="pros">
+
+            <h3>Pros</h3>
 
             <ul>
-                <li>6.2-inch AMOLED Display</li>
-                <li>8 GB RAM</li>
-                <li>256 GB Storage</li>
-                <li>50 MP Camera</li>
-                <li>5G Connectivity</li>
+                <li>Interesting and original concept</li>
+                <li>Excellent visual effects</li>
+                <li>Strong performances</li>
+                <li>Engaging storyline</li>
+                <li>Great background music</li>
             </ul>
 
-            <button>Add to Cart</button>
-            <button>Buy Now</button>
+        </section>
 
-        </article>
 
-    </div>
+        <!-- Cons Section -->
+        <section class="cons">
 
-    <!-- Footer -->
-    <footer>
-        <h3>Offers & Warranty</h3>
+            <h3>Cons</h3>
 
-        <p>✓ 10% instant discount on selected bank cards.</p>
-        <p>✓ 1 year manufacturer warranty.</p>
-        <p>✓ Free delivery available.</p>
-    </footer>
+            <ul>
+                <li>Complex storyline</li>
+                <li>Requires close attention</li>
+                <li>Some scenes may be confusing</li>
+            </ul>
 
-</body>
+        </section>
 
-</html>
+
+        <!-- Final Verdict -->
+        <section>
+
+            <h3>Final Thoughts</h3>
+
+            <p>
+                Inception is an ambitious movie with a creative concept
+                and a carefully constructed storyline. It is a good choice
+                for viewers who enjoy thought-provoking science-fiction
+                movies.
+            </p>
+
+        </section>
+
+    </article>
+
+</main>
+
+
+<!-- Website Footer -->
+<footer>
+
+    <p>
+        &copy; 2026 Movie Review Website
+    </p>
+
+    <nav aria-label="Footer navigation">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+    </nav>
+
+</footer>
+
+</body> </html>
