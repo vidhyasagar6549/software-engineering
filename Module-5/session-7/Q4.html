@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f6;
+            margin: 0;
+            padding: 25px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2874f0;
+            margin-bottom: 25px;
+        }
+
+        /* Desktop: 3 columns */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px #ddd;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            display: block;
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        .product-name {
+            font-size: 16px;
+            color: #333;
+            margin: 12px 0;
+        }
+
+        .price {
+            color: #212121;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Tablet: 2 columns */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile: 1 column */
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Featured Products</h2>
+
+    <section class="product-grid">
+
+        <div class="product-card">
+            <img src="../session-6/6572457_sd.avif" alt="Headphones">
+            <h3 class="product-name">Wireless Headphones</h3>
+            <p class="price">₹1,499</p>
+        </div>
+
+        <div class="product-card">
+            <img src="download.webp" alt="Smartphone">
+            <h3 class="product-name">Smartphone</h3>
+            <p class="price">₹12,999</p>
+        </div>
+
+        <div class="product-card">
+            <img src="smartwatch.webp" alt="Smartwatch">
+            <h3 class="product-name">Smartwatch</h3>
+            <p class="price">₹2,499</p>
+        </div>
+
+        <div class="product-card">
+            <img src="shoes.jpg" alt="Sports Shoes">
+            <h3 class="product-name">Sports Shoes</h3>
+            <p class="price">₹1,999</p>
+        </div>
+
+        <div class="product-card">
+            <img src="backpack.webp" alt="Backpack">
+            <h3 class="product-name">Travel Backpack</h3>
+            <p class="price">₹899</p>
+        </div>
+
+        <div class="product-card">
+            <img src="speaker.webp" alt="Speaker">
+            <h3 class="product-name">Bluetooth Speaker</h3>
+            <p class="price">₹1,299</p>
+        </div>
+
+    </section>
+
+</body>
+</html>

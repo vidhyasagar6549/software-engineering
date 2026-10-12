@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat Badge</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f1f3f6;
+            min-height: 200vh;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* Fixed WhatsApp notification badge */
+        .whatsapp-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 20px;
+            margin: 10px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .notification {
+            display: inline-block;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 4px 8px;
+            margin-left: 8px;
+            font-size: 12px;
+        }
+
+        .whatsapp-badge:hover {
+            background-color: #1ebe5d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Welcome to My Website!</h2>
+    <p>Scroll down the page to see that the WhatsApp badge stays in place.</p>
+
+    <div style="height: 1200px;">
+        <p>Sample page content...</p>
+    </div>
+
+    <div class="whatsapp-badge">
+        💬 WhatsApp
+        <span class="notification">3</span>
+    </div>
+
+</body>
+</html>
