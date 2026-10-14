@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist Navbar</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding: 15px 25px;
+        }
+
+        .navbar-brand {
+            color: #1ed760 !important;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #b3b3b3;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #1ed760;
+        }
+
+       .navbar-toggler {
+    border-color: white;
+}
+
+        .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+        .profile-btn {
+            background-color: #1ed760;
+            color: #000;
+            border: none;
+            border-radius: 25px;
+            padding: 8px 18px;
+            font-weight: bold;
+        }
+
+        .profile-btn:hover {
+            background-color: #1fdf64;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .welcome h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: bold;
+        }
+
+        .welcome p {
+            color: #b3b3b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                ♪ Musicify
+            </a>
+
+            <!-- Hamburger Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Navigation -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page" href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#playlists">
+                            Playlists
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile">
+                            Profile
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Search -->
+                <form class="d-flex mt-3 mt-lg-0" role="search">
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search music..."
+                        aria-label="Search music"
+                    >
+                    <button class="profile-btn" type="submit">
+                        Search
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="welcome" id="home">
+            <h1>Feel the Music 🎧</h1>
+            <p>Discover your favorite songs and create your own playlists.</p>
+        </section>
+
+        <section class="container py-4" id="playlists">
+            <h2>Your Playlists</h2>
+            <p class="text-secondary">Your favorite music, all in one place.</p>
+        </section>
+
+        <section class="container py-4" id="profile">
+            <h2>Your Profile</h2>
+            <p class="text-secondary">Manage your music preferences.</p>
+        </section>
+    </main>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
