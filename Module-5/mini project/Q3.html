@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Links Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 480px;
+            padding: 35px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 10px 35px rgba(31, 41, 55, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #25213b;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 28px;
+            font-size: 14px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 18px;
+        }
+
+        .input-group i {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            font-size: 19px;
+            pointer-events: none;
+        }
+
+        .instagram i {
+            color: #e1306c;
+        }
+
+        .linkedin i {
+            color: #0a66c2;
+        }
+
+        .facebook i {
+            color: #1877f2;
+        }
+
+        .github i {
+            color: #24292f;
+        }
+
+        .youtube i {
+            color: #ff0000;
+        }
+
+        .input-group input {
+            width: 100%;
+            height: 52px;
+            padding: 12px 15px 12px 48px;
+            border: 1px solid #d9dce5;
+            border-radius: 10px;
+            background: #fafbff;
+            font-size: 14px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #7655e8;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(118, 85, 232, 0.12);
+        }
+
+        .input-group input::placeholder {
+            color: #999;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 10px;
+            background: #7655e8;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #5b3cc4;
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Social Links</h1>
+        <p class="subtitle">Connect all your social profiles in one place.</p>
+
+        <form action="#" method="get">
+            <div class="input-group instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <input type="url" name="instagram" placeholder="Instagram profile URL" aria-label="Instagram profile URL">
+            </div>
+
+            <div class="input-group linkedin">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <input type="url" name="linkedin" placeholder="LinkedIn profile URL" aria-label="LinkedIn profile URL">
+            </div>
+
+            <div class="input-group facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+                <input type="url" name="facebook" placeholder="Facebook profile URL" aria-label="Facebook profile URL">
+            </div>
+
+            <div class="input-group github">
+                <i class="fa-brands fa-github"></i>
+                <input type="url" name="github" placeholder="GitHub profile URL" aria-label="GitHub profile URL">
+            </div>
+
+            <div class="input-group youtube">
+                <i class="fa-brands fa-youtube"></i>
+                <input type="url" name="youtube" placeholder="YouTube channel URL" aria-label="YouTube channel URL">
+            </div>
+
+            <button type="submit" class="submit-btn">Save Social Links</button>
+        </form>
+    </div>
+
+</body>
+</html>

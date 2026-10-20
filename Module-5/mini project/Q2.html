@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer Tag</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #202044, #090914);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 430px;
+            background: #191930;
+            text-align: center;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #34345e;
+        }
+
+        .profile {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #a855f7;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #302052;
+            color: #d8b4fe;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .bio {
+            color: #aaaac5;
+            line-height: 1.8;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: #17172e;
+            padding: 18px 10px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .stats h3 {
+            color: #c084fc;
+            margin-bottom: 5px;
+        }
+
+        .stats p {
+            color: #9696b2;
+            font-size: 11px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .links a {
+            display: block;
+            padding: 14px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .links a:hover {
+            opacity: 0.8;
+            transform: translateY(-3px);
+        }
+
+        .twitch {
+            background: #9146ff;
+        }
+
+        .discord {
+            background: #5865f2;
+        }
+
+        .steam {
+            background: #17406b;
+        }
+
+        .footer {
+            color: #777792;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .profile {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=400"
+             alt="Gamer Profile" class="profile">
+
+        <div class="tag">PRO GAMER</div>
+
+        <h1>ShadowX</h1>
+
+        <p class="bio">
+            🎮 Competitive Gamer<br>
+            ⚡ Love gaming and clutch plays<br>
+            🏆 Always ready for the next match
+        </p>
+
+        <div class="stats">
+            <div>
+                <h3>120+</h3>
+                <p>WINS</p>
+            </div>
+
+            <div>
+                <h3>45K</h3>
+                <p>XP</p>
+            </div>
+
+            <div>
+                <h3>99</h3>
+                <p>LEVEL</p>
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="https://www.twitch.tv/" class="twitch" target="_blank">🎮 Follow on Twitch</a>
+            <a href="https://discord.com/" class="discord" target="_blank">💬 Join my Discord</a>
+            <a href="https://store.steampowered.com/" class="steam" target="_blank">🚀 Add me on Steam</a>
+        </div>
+
+        <p class="footer">GG WP | RESPAWN | REPEAT</p>
+
+    </div>
+
+</body>
+</html>

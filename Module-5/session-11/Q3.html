@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Style Restaurant List</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f8f8;
+        }
+
+        .restaurant-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .restaurant-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .restaurant-img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .zomato-title {
+            color: #e23744;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand zomato-title fs-3" href="#">
+                zomato
+            </a>
+            <span class="text-secondary">Discover Restaurants</span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+
+        <h2 class="fw-bold mb-4">Popular Restaurants</h2>
+
+        <div class="row g-4">
+
+            <!-- Restaurant 1 -->
+            <div class="col-md-4">
+                <div class="card restaurant-card shadow-sm h-100">
+
+                    <img src="images (2).jfif"
+                         class="card-img-top restaurant-img"
+                         alt="Pizza restaurant">
+
+                    <div class="card-body">
+                        <h5 class="fw-bold">Pizza Paradise</h5>
+
+                        <p class="text-secondary mb-2">
+                            Pizza, Italian, Fast Food
+                        </p>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="badge text-bg-success">
+                                ★ 4.5 Rating
+                            </span>
+
+                            <span class="badge text-bg-danger">
+                                30% OFF
+                            </span>
+                        </div>
+
+                        <p class="text-success fw-semibold mb-1">
+                            ● Open Now
+                        </p>
+
+                        <p class="text-muted small mb-0">
+                            25–35 mins • ₹300 for two
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant 2 -->
+            <div class="col-md-4">
+                <div class="card restaurant-card shadow-sm h-100">
+
+                    <img src="download (1).jfif"
+                         class="card-img-top restaurant-img"
+                         alt="Indian restaurant">
+
+                    <div class="card-body">
+                        <h5 class="fw-bold">Spice of India</h5>
+
+                        <p class="text-secondary mb-2">
+                            North Indian, Biryani, Curry
+                        </p>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="badge text-bg-success">
+                                ★ 4.2 Rating
+                            </span>
+
+                            <span class="badge text-bg-warning">
+                                20% OFF
+                            </span>
+                        </div>
+
+                        <p class="text-danger fw-semibold mb-1">
+                            ● Closed Now
+                        </p>
+
+                        <p class="text-muted small mb-0">
+                            Opens at 7:00 PM • ₹400 for two
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant 3 -->
+            <div class="col-md-4">
+                <div class="card restaurant-card shadow-sm h-100">
+
+                    <img src="images.jfif"
+                         class="card-img-top restaurant-img"
+                         alt="Burger cafe">
+
+                    <div class="card-body">
+                        <h5 class="fw-bold">Burger Hub</h5>
+
+                        <p class="text-secondary mb-2">
+                            Burgers, Sandwiches, Beverages
+                        </p>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="badge text-bg-success">
+                                ★ 4.7 Rating
+                            </span>
+
+                            <span class="badge text-bg-primary">
+                                Free Delivery
+                            </span>
+                        </div>
+
+                        <p class="text-success fw-semibold mb-1">
+                            ● Open Now
+                        </p>
+
+                        <p class="text-muted small mb-0">
+                            15–25 mins • ₹250 for two
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

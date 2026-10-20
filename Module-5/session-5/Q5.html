@@ -1,11 +1,189 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BookMyShow - Movie Details</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #222;
+            transition: 0.3s;
+        }
+
+        .navbar {
+            background-color: #e91e63;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .theme-btn {
+            background-color: white;
+            color: #e91e63;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .movie-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 25px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        .movie-poster {
+            width: 280px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .movie-details h1 {
+            font-size: 35px;
+            margin-top: 0;
+        }
+
+        .rating {
+            color: #e91e63;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .movie-info {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .book-btn {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .book-btn:hover {
+            background-color: #c2185b;
+        }
+
+        body.dark-mode {
+            background-color: #181818;
+            color: #f5f5f5;
+        }
+
+        body.dark-mode .movie-container {
+            background-color: #292929;
+            box-shadow: 0 4px 15px #00000050;
+        }
+
+        body.dark-mode .movie-info {
+            color: #cccccc;
+        }
+
+        body.dark-mode .rating {
+            color: #ff6b9b;
+        }
+
+        body.dark-mode .theme-btn {
+            background-color: #333;
+            color: white;
+        }
+
+        @media (max-width: 650px) {
+            .movie-container {
+                margin: 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .movie-poster {
+                width: 100%;
+                max-width: 280px;
+                height: 350px;
+            }
+
+            .navbar {
+                padding: 15px;
+            }
+
+            .navbar h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <nav class="navbar">
+        <h2>bookmyshow</h2>
+        <button class="theme-btn" id="themeToggle">🌙 Dark Mode</button>
+    </nav>
+
+    <div class="movie-container">
+        <img
+            src="https://placehold.co/560x760/252044/ffffff?text=Movie+Poster"
+            alt="Movie poster"
+            class="movie-poster"
+        >
+
+        <div class="movie-details">
+            <h1>Avengers: Endgame</h1>
+
+            <p class="rating">★ 9.0/10</p>
+
+            <p class="movie-info">
+                Action | Adventure | Sci-Fi<br>
+                English, Hindi<br>
+                3h 2m • U/A • 2019
+            </p>
+
+            <h3>About the Movie</h3>
+
+            <p class="movie-info">
+                After the devastating events of Infinity War, the Avengers
+                unite for one final mission to restore balance to the universe.
+                An epic adventure filled with action, emotion, and sacrifice.
+            </p>
+
+            <button class="book-btn">Book Tickets</button>
+        </div>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById("themeToggle");
+
+        themeToggle.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+
+            if (document.body.classList.contains("dark-mode")) {
+                themeToggle.textContent = "☀️ Light Mode";
+            } else {
+                themeToggle.textContent = "🌙 Dark Mode";
+            }
+        });
+    </script>
+
 </body>
 </html>
