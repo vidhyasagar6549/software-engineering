@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    background-color: #f4f6ff;
+    color: #20243a;
+}
+
+.main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.form-card{
+    width: 100%;
+    max-width: 760px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+.form-header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.font{
+    color: #4e54c8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+h1{
+    font-size: 32px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+.fromgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.from-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+label{
+    font-size: 14px;
+    font-weight: bold;
+}
+input,select{
+    width:100%;
+    padding: 13px;
+    border: 1px solid #e4e7f1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+input:focus,select:focus{
+    border-color: #4e54c8;
+}
+textarea{
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e4e7f1;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family:'Plus Jakarta Sans', sans-serif ;
+    resize: vertical;
+    outline:none ;
+}
+textarea:focus{
+    border-color: #4e54c8;
+}
+.submit-btn{
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    background-color: #4e54c8;
+    color: white;
+    border: none;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -4,174 +4,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Links Preview</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Music Links Form</title>
     <style>
-        body {
-            background: #f1f4f9;
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
         }
-        .music-form {
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .form-box {
             background: white;
-            border-radius: 16px;
             padding: 30px;
+            border-radius: 16px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
         }
-        .preview-card {
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input[type="url"] {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: 2px solid #93c5fd;
+            border-color: #2563eb;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: white;
             border: none;
-            border-radius: 14px;
-            height: 100%;
-            transition: 0.3s;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
         }
-        .preview-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+        .submit-btn:hover {
+            background: #1d4ed8;
         }
-        .music-icon {
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .preview-card {
+            padding: 22px 15px;
+            background: white;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            overflow-wrap: anywhere;
+        }
+
+        .preview-card h3 {
+            margin-top: 10px;
+        }
+
+        .spotify {
+            border-top: 5px solid #1db954;
+        }
+
+        .youtube {
+            border-top: 5px solid #ff0033;
+        }
+
+        .apple {
+            border-top: 5px solid #fa243c;
+        }
+
+        .icon {
             font-size: 35px;
         }
-        .spotify {
-            color: #1db954;
+
+        .preview-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
         }
-        .youtube {
-            color: #ff0033;
+
+        .spotify a {
+            background: #1db954;
         }
-        .apple {
-            color: #fa243c;
+
+        .youtube a {
+            background: #ff0033;
         }
-        .preview-link {
-            overflow-wrap: anywhere;
+
+        .apple a {
+            background: #fa243c;
+        }
+
+        @media (max-width: 600px) {
+            .preview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                margin: 15px auto;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="text-center mb-4">
-                <h1 class="fw-bold">My Music Links</h1>
-                <p class="text-secondary">Add your favorite music profile links.</p>
+<div class="container">
+    <div class="form-box">
+        <h1>My Music Links</h1>
+        <p style="text-align:center;">Add your music profile URLs below.</p>
+
+        <form id="musicLinksForm" action="#" method="get">
+            <div class="form-group">
+                <label for="spotify">Spotify Profile URL</label>
+                <input type="url" id="spotify" name="spotify"
+                    placeholder="https://open.spotify.com/user/yourprofile"
+                    pattern="https://open\.spotify\.com/.*"
+                    required>
             </div>
 
-            <form id="musicLinksForm" class="music-form">
-                <div class="mb-3">
-                    <label for="spotify" class="form-label fw-semibold">Spotify Profile URL</label>
-                    <input type="url" class="form-control" id="spotify" placeholder="https://open.spotify.com/..." pattern="https://(open\.)?spotify\.com/.*" title="Enter a Spotify URL">
-                </div>
+            <div class="form-group">
+                <label for="youtube">YouTube Music URL</label>
+                <input type="url" id="youtube" name="youtube"
+                    placeholder="https://music.youtube.com/..."
+                    pattern="https://music\.youtube\.com/.*"
+                    required>
+            </div>
 
-                <div class="mb-3">
-                    <label for="youtube" class="form-label fw-semibold">YouTube Music URL</label>
-                    <input type="url" class="form-control" id="youtube" placeholder="https://music.youtube.com/..." pattern="https://music\.youtube\.com/.*" title="Enter a YouTube Music URL">
-                </div>
+            <div class="form-group">
+                <label for="apple">Apple Music Profile URL</label>
+                <input type="url" id="apple" name="apple"
+                    placeholder="https://music.apple.com/..."
+                    pattern="https://music\.apple\.com/.*"
+                    required>
+            </div>
 
-                <div class="mb-4">
-                    <label for="apple" class="form-label fw-semibold">Apple Music URL</label>
-                    <input type="url" class="form-control" id="apple" placeholder="https://music.apple.com/..." pattern="https://music\.apple\.com/.*" title="Enter an Apple Music URL">
-                </div>
-
-                <button type="submit" class="btn btn-dark w-100 py-2">Show Preview Cards</button>
-                <p id="message" class="text-danger mt-3 mb-0" role="alert"></p>
-            </form>
-        </div>
+            <button type="submit" class="submit-btn">Submit Music Links</button>
+        </form>
     </div>
 
-    <div class="mt-5">
-        <h2 class="fw-bold mb-4">Your Music Platforms</h2>
-        <div class="row g-4" id="previewContainer"></div>
+    <h2>Music Link Previews</h2>
+
+    <div class="preview-grid">
+        <div class="preview-card spotify">
+            <div class="icon">🎧</div>
+            <h3>Spotify</h3>
+            <p>Listen to your favorite tracks and playlists.</p>
+            <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Open Spotify</a>
+        </div>
+
+        <div class="preview-card youtube">
+            <div class="icon">▶️</div>
+            <h3>YouTube Music</h3>
+            <p>Explore music, albums, and playlists.</p>
+            <a href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">Open YouTube Music</a>
+        </div>
+
+        <div class="preview-card apple">
+            <div class="icon">🎵</div>
+            <h3>Apple Music</h3>
+            <p>Discover artists and your favorite songs.</p>
+            <a href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Open Apple Music</a>
+        </div>
     </div>
 </div>
 
-<script>
-    const form = document.getElementById("musicLinksForm");
-    const previewContainer = document.getElementById("previewContainer");
-    const message = document.getElementById("message");
-
-    const platforms = [
-        {
-            id: "spotify",
-            name: "Spotify",
-            icon: "♫",
-            className: "spotify",
-            background: "#e7f8ed"
-        },
-        {
-            id: "youtube",
-            name: "YouTube Music",
-            icon: "▶",
-            className: "youtube",
-            background: "#fff0f1"
-        },
-        {
-            id: "apple",
-            name: "Apple Music",
-            icon: "♪",
-            className: "apple",
-            background: "#fff0f2"
-        }
-    ];
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        message.textContent = "";
-
-        const submittedLinks = platforms
-            .map(platform => ({
-                ...platform,
-                url: document.getElementById(platform.id).value.trim()
-            }))
-            .filter(platform => platform.url);
-
-        if (submittedLinks.length === 0) {
-            message.textContent = "Please enter at least one music URL.";
-            return;
-        }
-
-        previewContainer.replaceChildren();
-
-        submittedLinks.forEach(platform => {
-            const column = document.createElement("div");
-            column.className = "col-12 col-md-6 col-lg-4";
-
-            const card = document.createElement("div");
-            card.className = "card preview-card shadow-sm";
-
-            const body = document.createElement("div");
-            body.className = "card-body p-4";
-
-            const icon = document.createElement("div");
-            icon.className = `music-icon ${platform.className} mb-3`;
-            icon.textContent = platform.icon;
-
-            const title = document.createElement("h5");
-            title.className = "card-title fw-bold";
-            title.textContent = platform.name;
-
-            const description = document.createElement("p");
-            description.className = "text-secondary small";
-            description.textContent = "Your music link";
-
-            const link = document.createElement("a");
-            link.className = "preview-link d-block mb-3";
-            link.href = platform.url;
-            link.textContent = platform.url;
-            link.target = "_blank";
-            link.rel = "noopener noreferrer";
-
-            const button = document.createElement("a");
-            button.className = "btn btn-dark w-100";
-            button.href = platform.url;
-            button.target = "_blank";
-            button.rel = "noopener noreferrer";
-            button.textContent = "Open Platform";
-
-            body.append(icon, title, description, link, button);
-            card.append(body);
-            column.append(card);
-            previewContainer.append(column);
-        });
-    });
-</script>
-
 </body>
 </html>
+
