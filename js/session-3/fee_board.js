@@ -98,3 +98,48 @@ canWriteTest = (attendancePercent >= 75 && feePaid === true) || hasPermission;
 
 console.log("Student 3 - Can Write Test: " + canWriteTest);
 
+
+let fee = 1200;
+let feeBand;
+let paymentStatus = paid ? "Paid" : "Due";
+
+if (fee < 1500) {
+    feeBand = "Basic";
+} else if (fee <= 2500) {
+    feeBand = "Standard";
+} else {
+    feeBand = "Premium";
+}
+
+console.log("Fee: " + fee + " | Band: " + feeBand + " | Status: " + paymentStatus);
+
+fee = 1800;
+if (fee < 1500) {
+    feeBand = "Basic";
+} else if (fee <= 2500) {
+    feeBand = "Standard";
+} else {
+    feeBand = "Premium";
+}
+console.log("Fee: " + fee + " | Band: " + feeBand + " | Status: " + paymentStatus);
+
+fee = 2500;
+if (fee < 1500) {
+    feeBand = "Basic";
+} else if (fee <= 2500) {
+    feeBand = "Standard";
+} else {
+    feeBand = "Premium";
+}
+console.log("Fee: " + fee + " | Band: " + feeBand + " | Status: " + paymentStatus);
+
+fee = 3000;
+if (fee < 1500) {
+    feeBand = "Basic";
+} else if (fee <= 2500) {
+    feeBand = "Standard";
+} else {
+    feeBand = "Premium";
+}
+console.log("Fee: " + fee + " | Band: " + feeBand + " | Status: " + paymentStatus);
+
